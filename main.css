@@ -285,3 +285,11 @@ button:hover:before {
 .info-box:last-child {
 	border: none;
 }
+@media (max-width: 800px) {
+	.table {
+		width: 80vw;
+	}
+	.table .el-intro {
+		height: 20vh;
+	}
+}
