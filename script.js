@@ -22,6 +22,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 	let d = document.getElementById("d-v");
 	let y_d = document.getElementById("y-d-v");
 	let elIntro = document.getElementById("el-intro");
+	let html = document.querySelector("html");
+	let body = document.querySelector("body");
 
 	// Fixing View Problems
 	symb.style.fontSize = 0.047109375 * screen.width + "px";
@@ -270,13 +272,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
 			} else {
 				elIntro.style.backgroundImage = "linear-gradient(to right, #33cc99, #99ffcc)";
 			}
-
+			html.classList.add("no-scroll");
+			body.classList.add("no-scroll");
 			infoBox.classList.add("opened");
 	  	});
   	}
 	for (close of closes) {
 		close.addEventListener("click", () => {
 			if (infoBox.classList.contains("opened") == true) {
+				html.classList.remove("no-scroll");
+				body.classList.remove("no-scroll");
 				infoBox.classList.remove("opened");
 			}
 		});
